@@ -1,0 +1,47 @@
+<?php
+add_action( 'init', function() {
+	register_post_type( 'teams', array(
+	'labels' => array(
+		'name' => 'Team',
+		'singular_name' => 'team',
+		'menu_name' => 'Team',
+		'all_items' => 'All Team',
+		'edit_item' => 'Edit team',
+		'view_item' => 'View team',
+		'view_items' => 'View Team',
+		'add_new_item' => 'Add New team',
+		'add_new' => 'Add New team',
+		'new_item' => 'New team',
+		'parent_item_colon' => 'Parent team:',
+		'search_items' => 'Search Team',
+		'not_found' => 'No team found',
+		'not_found_in_trash' => 'No team found in Trash',
+		'archives' => 'team Archives',
+		'attributes' => 'team Attributes',
+		'insert_into_item' => 'Insert into team',
+		'uploaded_to_this_item' => 'Uploaded to this team',
+		'filter_items_list' => 'Filter team list',
+		'filter_by_date' => 'Filter team by date',
+		'items_list_navigation' => 'Team list navigation',
+		'items_list' => 'Team list',
+		'item_published' => 'team published.',
+		'item_published_privately' => 'team published privately.',
+		'item_reverted_to_draft' => 'team reverted to draft.',
+		'item_scheduled' => 'team scheduled.',
+		'item_updated' => 'team updated.',
+		'item_link' => 'team Link',
+		'item_link_description' => 'A link to a team.',
+	),
+	'public' => true,
+	'hierarchical' => true,
+	'show_in_rest' => true,
+	'menu_icon' => 'dashicons-groups',
+	'supports' => array(
+		0 => 'title',
+		1 => 'editor',
+		2 => 'thumbnail',
+	),
+	'delete_with_user' => false,
+) );
+} );
+
